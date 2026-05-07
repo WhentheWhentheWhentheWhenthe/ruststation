@@ -1,0 +1,11 @@
+impl Cpu {
+
+    fn op_lui(&mut self, instruction: Instruction) {
+        let i = instruction.imm();
+        let t = instruction.t();
+
+        let v = i << 16;
+
+        self.set_reg(t, v);
+    }
+}

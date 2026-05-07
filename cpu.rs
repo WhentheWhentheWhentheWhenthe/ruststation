@@ -33,3 +33,29 @@ impl Cpu {
         let t = instruction.t();
 
         panic!("what_now?");
+
+        pub struct Cpu {
+            pc: u32, 
+            regs: [u32; 32]
+            inter: Interconnect,
+        }
+
+        impl Cpu {
+            pub fn new(inter: Interconnect) -> Cpu{
+                let mut regs = [0xdeadbeef; 32];
+
+                regs [0] = 0;
+                regs: regs,
+                inter: inter,
+            }
+        }
+
+        fn reg(&self, index :u32) -> u32 {
+            self.regs[index as usize]
+        }
+
+        fn set _reg(&mut self, index: u32, val: u32) {
+            self.regs[index as usize] = va;;
+
+            self.regs[0] = 0;
+        }
